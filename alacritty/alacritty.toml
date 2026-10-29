@@ -1,0 +1,64 @@
+# Alacritty config. Alacritty 0.13+ reads this file and ignores alacritty.yml.
+# Original YAML: alacritty.yml.bak
+# Palette: Baskerville FarSide (ArcoLinux). The old top-level `theme` key and
+# `colors.name` / `colors.author` are not settings; they were removed so the
+# parser does not reject the file.
+
+[window]
+# Kept from the original. Below 1.0 needs a compositor (picom on LeftWM).
+opacity = 0.8
+
+[scrolling]
+# Original choice. Alacritty caps this at 100000.
+history = 50000
+
+[font]
+size = 11.0
+# Draw box and powerline glyphs without a second font lookup.
+builtin_box_drawing = true
+# One family for every style. The old bold-italic face was "monospace",
+# which forced a fallback font and mismatched metrics.
+normal = { family = "hack", style = "Regular" }
+bold = { family = "hack", style = "Bold" }
+italic = { family = "hack", style = "Italic" }
+bold_italic = { family = "hack", style = "Bold Italic" }
+
+[cursor]
+# "Never" stops the cursor blink timer, so the GPU is not redrawing while idle.
+style = { shape = "Block", blinking = "Never" }
+
+[mouse]
+hide_when_typing = true
+
+[colors.primary]
+background = "#000000"
+foreground = "#919191"
+
+[colors.cursor]
+text = "#000000"
+cursor = "#919191"
+
+[colors.normal]
+black = "#303030"
+red = "#a43261"
+green = "#006ca5"
+yellow = "#007086"
+blue = "#6751a6"
+magenta = "#913e88"
+cyan = "#0061b1"
+white = "#c6c6c6"
+
+[colors.bright]
+black = "#5e5e5e"
+red = "#ff9fc9"
+green = "#3bd6ff"
+yellow = "#00ddf4"
+blue = "#d5b8ff"
+magenta = "#ffa7f6"
+cyan = "#93c9ff"
+white = "#ffffff"
+
+[keyboard]
+bindings = [
+  { key = "F11", action = "ToggleFullscreen" },
+]
